@@ -1,0 +1,19 @@
+modules:
+  jira:issuePanel:
+    - key: hello-world-app-hello-world-issue-panel
+      resource: main
+      resolver:
+        function: resolver
+      render: native
+      title: hello-world-app
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs20.x
+  id: ari:cloud:ecosystem::app/3c0b9a29-9c9b-4e5a-9a82-5bac89c6cd08
